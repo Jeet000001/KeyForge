@@ -22,7 +22,27 @@ const FaQ = () => {
         title="Do I need a unique password for every account?"
         description="Having a unique, complex password for every account is essential, especially since leaked passwords often end up in breach databases or on the dark web. Reusing passwords makes it easier for attackers to access multiple accounts at once. If managing strong passwords feels overwhelming, our password generator makes it simple. It quickly creates secure passwords and helps protect your identity from hackers and cybercriminals."
         />
-        <Accordion />
+        <Accordion 
+        title="What is the best kind of password generator?"
+        description="The best password generators use cryptographic entropy to create truly random and secure passwords. KeyForge is built to do exactly that—without complexity or frustration. All passwords are generated locally on your device, with nothing transmitted or stored online. We never create fake passwords or collect your data, ensuring complete privacy. With KeyForge, you can confidently generate strong, unique passwords for both online and offline use."
+        />
+        <Accordion 
+        title="How do I get a random password?"
+        description="KeyForge’s random password generator makes securing your accounts effortless. You can instantly create strong, random passwords right in your browser. Use the length toggle and character selection to customize your password. The generated password area shows its strength, from Very Weak to Very Strong. Click or tap the Copy button to save your password on any device. Apply it to your accounts to keep them extra secure and protected."
+        />
+
+        <Accordion 
+        title="Can password generators be hacked?"
+        description="You’re safer with KeyForge’s random password generator because your passwords are generated locally on your device and never sent over the internet. We don’t store or track anything, so hackers can’t access your data. Only you can see the characters your device generates in your browser. Plus, KeyForge is backed by a trusted cybersecurity brand, giving you extra confidence in your online safety."
+        />
+        <Accordion 
+        title="Is there a secure way to store passwords?"
+        description="Yes! You can store passwords safely using a secure password manager with features like two-factor authentication and encrypted syncing. Always avoid sharing your passwords and steer clear of scam websites to keep your accounts fully protected."
+        />
+        <Accordion 
+        title="What makes a password safe?"
+        description="A safe password is strong, unique, and hard to crack. Follow these tips to stay secure: Use at least 16 characters with a mix of letters, numbers, and symbols. Never reuse passwords across multiple accounts. Avoid saving passwords in your browser to prevent unauthorized access. Use a password generator, like KeyForge, to create strong, random passwords instantly. Store passwords in a secure password manager, not in plain text or unsecured locations."
+        />
       </div>
     </div>
   );
