@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full px-6 py-4 sticky top-0 z-50 transition-all duration-300
+      className={`w-full h-16 px-6 py-4 sticky top-0 z-50 transition-all duration-300
         ${
           theme === "dark"
             ? "bg-gray-950 text-white border-b border-gray-800"
@@ -94,7 +94,7 @@ const Navbar = () => {
         className={`md:hidden overflow-hidden transition-all duration-300
           ${
             menuOpen
-              ? "max-h-40 opacity-100 mt-4"
+              ? "max-h-40 bg-gray-50 opacity-100 ml-37 mt-5 p-4 rounded-lg shadow-md"
               : "max-h-0 opacity-0"
           }`}
       >
