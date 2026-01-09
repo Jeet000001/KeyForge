@@ -7,7 +7,11 @@ const FaQ = () => {
   return (
     <section
       className={`mt-10 w-full py-16 px-6 flex flex-col items-center transition-colors duration-300
-        ${theme === "dark" ? "bg-gray-950 text-gray-300" : "bg-white text-gray-900"}`}
+        ${
+          theme === "dark"
+            ? "bg-gray-950 text-gray-300"
+            : "bg-white text-gray-900"
+        }`}
     >
       <h2
         className={`text-3xl md:text-4xl font-bold mb-4 text-center
@@ -48,7 +52,6 @@ const FaQ = () => {
         <Accordion
           title="Can password generators be hacked?"
           description="You’re safer with KeyForge’s random password generator because your passwords are generated locally on your device and never sent over the internet. We don’t store or track anything, so hackers can’t access your data. Only you can see the characters your device generates in your browser. Plus, KeyForge is backed by a trusted cybersecurity brand, giving you extra confidence in your online safety."
-
         />
         <Accordion
           title="Is there a secure way to store passwords?"
