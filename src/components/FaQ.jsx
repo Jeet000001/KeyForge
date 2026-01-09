@@ -18,6 +18,11 @@ const FaQ = () => {
           title="Why should I use a password generator?"
           description="You should use a password generator because it creates strong, random passwords that are extremely difficult to guess or crack, helps you avoid reusing weak passwords across multiple accounts, protects you from common security threats and data breaches, and improves your overall online safety with minimal effort."
         />
+        <Accordion
+        title="Do I need a unique password for every account?"
+        description="Having a unique, complex password for every account is essential, especially since leaked passwords often end up in breach databases or on the dark web. Reusing passwords makes it easier for attackers to access multiple accounts at once. If managing strong passwords feels overwhelming, our password generator makes it simple. It quickly creates secure passwords and helps protect your identity from hackers and cybercriminals."
+        />
+        <Accordion />
       </div>
     </div>
   );
