@@ -1,6 +1,7 @@
 import FaQ from "./components/FaQ";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import KeyGenerator from "./components/KeyGenerator";
 import Navbar from "./components/Navbar";
 import PasswordTips from "./components/PasswordTips";
 import { useTheme } from "./theme/ThemeToggler";
@@ -15,6 +16,7 @@ const App = () => {
     >
       <Navbar />
       <Hero />
+      <KeyGenerator />
       <PasswordTips />
       <FaQ />
       <Footer />
