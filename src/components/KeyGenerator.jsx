@@ -53,9 +53,9 @@ const KeyGenerator = () => {
   const strengthData = getStrength();
 
   return (
-    <div className={`flex items-center justify-center min-h-screen p-4 md:p-6 transition-colors duration-300 ${theme === "dark" ? "bg-gray-950" : "bg-gray-50"}`}>
+    <div className={`flex items-center justify-center p-4 md:p-6 transition-colors duration-300 ${theme === "dark" ? "bg-gray-950" : "bg-white"}`}>
       <div className={`w-full max-w-4xl rounded-[30px] md:rounded-[40px] p-6 md:p-12 shadow-2xl transition-all duration-300 border ${
-        theme === "dark" ? "bg-gray-900 border-gray-800 shadow-black" : "bg-white border-transparent shadow-gray-200"
+        theme === "dark" ? "bg-gray-900 border-gray-800 shadow-black" : "bg-gray-50 border-transparent shadow-gray-200"
       }`}>
         
         {/* Row 1: Display and Copy Button */}

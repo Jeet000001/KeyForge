@@ -6,8 +6,7 @@ const FaQ = () => {
 
   return (
     <section
-      className={`w-full px-4 sm:px-6 md:px-10
-        py-14 sm:py-16 md:py-20
+      className={`w-full px-4 sm:px-6 md:px-10 sm:py-16 md:pt-5 
         flex flex-col items-center transition-colors duration-300
         ${
           theme === "dark"

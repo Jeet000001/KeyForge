@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-full mt-16 sm:mt-20 py-6 sm:py-8 px-4 sm:px-6
+      className={`w-full  sm:py-8 px-4 sm:px-6 
         border-t transition-colors duration-300
         ${
           theme === "dark"

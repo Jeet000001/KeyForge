@@ -15,11 +15,13 @@ const App = () => {
         ${theme === "dark" ? "bg-gray-950 text-white" : "bg-white text-black"}`}
     >
       <Navbar />
-      <Hero />
-      <KeyGenerator />
-      <PasswordTips />
-      <FaQ />
-      <Footer />
+      <div className="flex flex-col gap-10">
+        <Hero />
+        <KeyGenerator />
+        <PasswordTips />
+        <FaQ />
+        <Footer />
+      </div>
     </div>
   );
 };
