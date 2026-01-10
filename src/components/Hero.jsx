@@ -5,11 +5,20 @@ const Hero = () => {
 
   return (
     <header
-      className={`w-full min-h-[85vh] flex flex-col items-center justify-center 
+      className={`w-full flex flex-col items-center justify-center 
       text-center px-4 sm:px-6 md:px-10 lg:px-16 pt-14 md:pt-20 
       transition-colors duration-300
       ${theme === "dark" ? "bg-gray-950" : "bg-white"}`}
     >
+      <h1
+        className={`px-4 py-3 rounded-full font-sans font-medium mb-5 ${
+          theme === "dark"
+            ? "text-white bg-gray-900"
+            : "text-white bg-black shadow-2xl"
+        }`}
+      >
+        Just released v1.0.0
+      </h1>
       {/* Heading */}
       <h1
         className={`font-extrabold tracking-tight leading-tight
