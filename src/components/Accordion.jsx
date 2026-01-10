@@ -11,48 +11,59 @@ const Accordion = ({ title, description }) => {
   const hoverBg = theme === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-50";
   const openBg = theme === "dark" ? "bg-gray-800" : "bg-gray-100";
   const textColor = theme === "dark" ? "text-gray-200" : "text-gray-800";
-  const descriptionColor = theme === "dark" ? "text-gray-400" : "text-gray-600";
+  const descriptionColor =
+    theme === "dark" ? "text-gray-400" : "text-gray-600";
   const iconBg = theme === "dark" ? "bg-gray-700" : "bg-gray-100";
-  const iconOpenBg = theme === "dark" ? "bg-blue-600 text-white" : "bg-blue-500 text-white";
+  const iconOpenBg =
+    theme === "dark"
+      ? "bg-blue-600 text-white"
+      : "bg-blue-500 text-white";
 
   return (
-    <div className="w-full flex justify-center px-4">
+    <div className="w-full flex justify-center px-3 sm:px-4">
       <div
-        className={`w-full max-w-2xl mb-3 rounded-2xl border ${borderColor} ${bgColor} overflow-hidden
-          transition-all duration-500 ease-in-out
+        className={`w-full max-w-2xl rounded-2xl border ${borderColor} ${bgColor}
+          overflow-hidden transition-all duration-500 ease-in-out
           ${open ? "shadow-xl" : "shadow-md"}`}
       >
+        {/* Header */}
         <div
           onClick={() => setOpen(!open)}
           role="button"
           tabIndex={0}
           className={`cursor-pointer flex items-center justify-between
-            px-6 py-5 font-semibold transition-colors duration-300
+            px-4 sm:px-6 py-4 sm:py-5 font-semibold
+            transition-colors duration-300
             ${open ? openBg : hoverBg}`}
         >
           <span
-            className={`text-base md:text-lg transition-all duration-300 
+            className={`text-sm sm:text-base md:text-lg transition-all duration-300
               ${open ? "text-blue-500 translate-x-1" : textColor}`}
           >
             {title}
           </span>
 
+          {/* Icon */}
           <span
-            className={`transition-all duration-500 ease-out p-2 rounded-full
-              ${open ? iconOpenBg + " rotate-45" : iconBg + " text-gray-600 rotate-0"}`}
+            className={`p-2 rounded-full transition-all duration-500 ease-out
+              ${open ? iconOpenBg + " rotate-45" : iconBg + " rotate-0"}`}
           >
-            <RxPlus size={20} />
+            <RxPlus size={18} className="sm:w-5 sm:h-5" />
           </span>
         </div>
 
+        {/* Content */}
         <div
           className={`grid transition-all duration-500 ease-in-out
             ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
         >
           <div className="overflow-hidden">
             <div
-              className={`px-6 pb-6 leading-relaxed transition-all duration-700
-                ${open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"} ${descriptionColor}`}
+              className={`px-4 sm:px-6 pb-5 sm:pb-6
+                text-sm sm:text-base leading-relaxed
+                transition-all duration-700
+                ${open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"}
+                ${descriptionColor}`}
             >
               {description}
             </div>
