@@ -24,28 +24,25 @@ const Navbar = () => {
       {/* Top Bar */}
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-2xl font-extrabold doto">KeyForge</h1>
+        <h1 className="text-2xl font-extrabold doto">
+          <a href="#" home>
+            KeyForge
+          </a>
+        </h1>
 
         {/* Right Side (Theme Toggle + Hamburger) */}
         <div className="flex items-center gap-4 md:hidden">
           {/* Theme Toggle (OUTSIDE hamburger) */}
           <Button
             logo={
-              theme === "dark" ? (
-                <MdOutlineLightMode />
-              ) : (
-                <MdOutlineDarkMode />
-              )
+              theme === "dark" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />
             }
             click={toggleTheme}
             style="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition"
           />
 
           {/* Hamburger */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-2xl"
-          >
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl">
             {menuOpen ? <MdClose /> : <MdMenu />}
           </button>
         </div>
@@ -53,7 +50,18 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6">
           <a
-            href="#"
+            href="#home"
+            className={`font-medium transition ${
+              theme === "dark"
+                ? "text-gray-300 hover:text-blue-400"
+                : "text-gray-700 hover:text-blue-600"
+            }`}
+          >
+            Home
+          </a>
+
+          <a
+            href="#generator"
             className={`font-medium transition ${
               theme === "dark"
                 ? "text-gray-300 hover:text-blue-400"
@@ -64,7 +72,7 @@ const Navbar = () => {
           </a>
 
           <a
-            href="#"
+            href="#faq"
             className={`font-medium transition ${
               theme === "dark"
                 ? "text-gray-300 hover:text-blue-400"
@@ -77,11 +85,7 @@ const Navbar = () => {
           {/* Theme Toggle (Desktop) */}
           <Button
             logo={
-              theme === "dark" ? (
-                <MdOutlineLightMode />
-              ) : (
-                <MdOutlineDarkMode />
-              )
+              theme === "dark" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />
             }
             click={toggleTheme}
             style="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
@@ -96,11 +100,26 @@ const Navbar = () => {
             menuOpen
               ? "max-h-40 bg-gray-50 opacity-100 ml-37 mt-5 p-4 rounded-lg shadow-md"
               : "max-h-0 opacity-0"
-          }`}
+          }
+               ${
+                 theme === "dark"
+                   ? "bg-gray-900 border border-gray-800"
+                   : "bg-gray-50 border border-gray-200"
+               }`}
       >
         <div className="flex flex-col gap-4">
           <a
-            href="#"
+            href="#home"
+            className={`font-medium transition ${
+              theme === "dark"
+                ? "text-gray-300 hover:text-blue-400"
+                : "text-gray-700 hover:text-blue-600"
+            }`}
+          >
+            Home
+          </a>
+          <a
+            href="#generator"
             onClick={() => setMenuOpen(false)}
             className={`font-medium transition ${
               theme === "dark"
@@ -112,7 +131,7 @@ const Navbar = () => {
           </a>
 
           <a
-            href="#"
+            href="#faq"
             onClick={() => setMenuOpen(false)}
             className={`font-medium transition ${
               theme === "dark"

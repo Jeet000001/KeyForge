@@ -8,3 +8,6 @@
   font-variation-settings:
     "ROND" 0;
 }
+html {
+  scroll-behavior: smooth;
+}

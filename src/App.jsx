@@ -5,6 +5,7 @@ import KeyGenerator from "./components/KeyGenerator";
 import Navbar from "./components/Navbar";
 import PasswordTips from "./components/PasswordTips";
 import { useTheme } from "./theme/ThemeToggler";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const { theme } = useTheme();
@@ -15,11 +16,23 @@ const App = () => {
         ${theme === "dark" ? "bg-gray-950 text-white" : "bg-white text-black"}`}
     >
       <Navbar />
-      <div className="flex flex-col gap-10">
-        <Hero />
-        <KeyGenerator />
-        <PasswordTips />
-        <FaQ />
+      <div >
+        <section id="home">
+          <Hero />
+        </section>
+
+        <section id="generator">
+          <KeyGenerator />
+        </section>
+
+        <section id="tips">
+          <PasswordTips />
+        </section>
+
+        <section id="faq">
+          <FaQ />
+        </section>
+
         <Footer />
       </div>
     </div>

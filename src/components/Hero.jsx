@@ -10,7 +10,15 @@ const Hero = () => {
       transition-colors duration-300
       ${theme === "dark" ? "bg-gray-950" : "bg-white"}`}
     >
-      <h1 className={`px-4 py-3 rounded-full font-sans font-medium mb-5 ${theme === "dark" ? "text-white bg-gray-900" : "text-white bg-gray-900 shadow-2xl"}`}>Just released v1.0.0</h1>
+      <h1
+        className={`px-4 py-3 rounded-full font-sans font-medium mb-5 ${
+          theme === "dark"
+            ? "text-white bg-gray-900"
+            : "text-white bg-gray-900 shadow-2xl"
+        }`}
+      >
+        Just released v1.0.0
+      </h1>
       {/* Heading */}
       <h1
         className={`font-extrabold tracking-tight leading-tight
@@ -39,25 +47,29 @@ const Hero = () => {
         className="mt-10 sm:mt-12 flex flex-col sm:flex-row 
         items-center gap-4 sm:gap-6"
       >
-        <button
-          className="w-80 sm:w-auto px-8 py-3 rounded-full bg-blue-600 
+        <a href="#generator">
+          <button
+            className="w-80 sm:w-auto px-8 py-3 rounded-full bg-blue-600 
           text-white font-semibold
           hover:bg-blue-700 transition
           shadow-[0_10px_30px_-8px_rgba(37,99,235,0.6)]"
-        >
-          Generate Key
-        </button>
+          >
+            Generate Key
+          </button>
+        </a>
 
-        <button
-          className={`w-80 sm:w-auto px-8 py-3 rounded-full font-semibold transition
+        <a href="#tips">
+          <button
+            className={`w-80 sm:w-auto px-8 py-3 rounded-full font-semibold transition
             ${
               theme === "dark"
                 ? "border border-gray-600 text-gray-300 hover:bg-gray-800"
                 : "border border-gray-300 text-gray-700 hover:bg-gray-50"
             }`}
-        >
-          Learn More
-        </button>
+          >
+            Learn More
+          </button>
+        </a>
       </div>
     </header>
   );
