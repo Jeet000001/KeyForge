@@ -5,21 +5,26 @@ const Hero = () => {
 
   return (
     <header
-      className={`w-full flex flex-col items-center justify-center 
-      text-center px-4 sm:px-6 md:px-10 lg:px-16 pt-14 md:pt-10 md:pb-10
+      id="home"
+      className={`w-full min-h-[calc(100vh-80px)]
+      flex flex-col items-center justify-center
+      text-center px-4 sm:px-6 md:px-10 lg:px-16
       transition-colors duration-300
       ${theme === "dark" ? "bg-gray-950" : "bg-white"}`}
     >
+      {/* Version Badge */}
       <h1
-        className={`px-4 py-3 rounded-full font-sans font-medium mb-5 ${
+        className={`px-4 py-2 rounded-full font-medium mb-4 text-sm
+        ${
           theme === "dark"
             ? "text-white bg-gray-900"
-            : "text-white bg-gray-900 shadow-2xl"
+            : "text-white bg-gray-900 shadow-lg"
         }`}
       >
         Just released v1.0.0
       </h1>
-      {/* Heading */}
+
+      {/* Main Heading */}
       <h1
         className={`font-extrabold tracking-tight leading-tight
         text-3xl sm:text-4xl md:text-5xl lg:text-6xl
@@ -31,7 +36,7 @@ const Hero = () => {
 
       {/* Subheading */}
       <p
-        className={`mt-6 sm:mt-7 md:mt-8
+        className={`mt-5 sm:mt-6
         text-base sm:text-lg md:text-xl
         max-w-xl md:max-w-2xl
         leading-relaxed
@@ -44,15 +49,15 @@ const Hero = () => {
 
       {/* CTA Buttons */}
       <div
-        className="mt-10 sm:mt-12 flex flex-col sm:flex-row 
+        className="mt-8 sm:mt-10 flex flex-col sm:flex-row
         items-center gap-4 sm:gap-6"
       >
         <a href="#generator">
           <button
-            className="w-80 sm:w-auto px-8 py-3 rounded-full bg-blue-600 
-          text-white font-semibold
-          hover:bg-blue-700 transition
-          shadow-[0_10px_30px_-8px_rgba(37,99,235,0.6)]"
+            className="w-72 sm:w-auto px-8 py-3 rounded-full
+            bg-blue-600 text-white font-semibold
+            hover:bg-blue-700 transition
+            shadow-[0_10px_30px_-8px_rgba(37,99,235,0.6)]"
           >
             Generate Key
           </button>
@@ -60,7 +65,7 @@ const Hero = () => {
 
         <a href="#tips">
           <button
-            className={`w-80 sm:w-auto px-8 py-3 rounded-full font-semibold transition
+            className={`w-72 sm:w-auto px-8 py-3 rounded-full font-semibold transition
             ${
               theme === "dark"
                 ? "border border-gray-600 text-gray-300 hover:bg-gray-800"

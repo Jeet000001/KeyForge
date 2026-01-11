@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-full  sm:py-8 px-4 sm:px-6 
+      className={`w-full mt-5 sm:py-8 px-4 sm:px-6 
         border-t transition-colors duration-300
         ${
           theme === "dark"
@@ -16,6 +16,7 @@ const Footer = () => {
     >
       <div
         className="
+          py-5 md:py-1
           max-w-6xl mx-auto
           flex flex-col items-center
           gap-2 sm:gap-3

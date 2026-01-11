@@ -9,7 +9,7 @@ const PasswordTips = () => {
 
   return (
     <section
-      className={`w-full px-4 sm:px-6 md:px-10 lg:px-16 py-16 md:py-10
+      className={`w-full min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 py-16 md:py-10
       transition-colors duration-300
       ${theme === "dark" ? "bg-gray-950" : "bg-white"}`}
     >
